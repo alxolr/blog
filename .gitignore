@@ -1,0 +1,9 @@
+.cache
+node_modules/
+
+static/*
+
+!static/.gitignore
+
+src/components/**/*.js
+src/templates/**/*.js
