@@ -1,9 +1,10 @@
 .cache
 node_modules/
 
-static/*
+static/templates
+static/*.js
+static/*.css
 
-!static/.gitignore
 
 src/components/**/*.js
 src/templates/**/*.js

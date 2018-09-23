@@ -1,20 +1,20 @@
 <lasso-page/>
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>${data.title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Alexandru Olaru"/>
+    <title>alxolr's blog | ${data.title}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="static/css/layout.css"/>
     <lasso-head/>
   </head>
   <body>
-    <app-hello name=data.name/>
-    You have ${data.count} new messages!
-
-    <ul if(data.colors && data.colors.length)>
-      <li style="color: ${color}" for(color in data.colors)>${color}</li>
-    </ul>
-    <div else>No colors!</div>
+    <navbar/>
+    <page-header/>
+    <footerbar/>
     <lasso-body/>
   </body>
 </html>
