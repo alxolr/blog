@@ -7,14 +7,20 @@
     <meta name="description" content=""/>
     <meta name="author" content="Alexandru Olaru"/>
     <title>alxolr's blog | ${data.title}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="static/css/layout.css"/>
     <lasso-head/>
   </head>
   <body>
     <navbar/>
-    <page-header/>
+    <showcase/>
+    <newsletter/>
+    <div class="content">
+      <article-cards/>
+    </div>
     <footerbar/>
     <lasso-body/>
+    <script src="static/vendor/jquery/jquery.min.js"/>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"/>
   </body>
 </html>

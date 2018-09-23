@@ -1,5 +1,12 @@
-<footer>
+class {
+  onCreate() {
+    this.state = {
+      year: (new Date()).getFullYear()
+    }
+  }
+}
+<footer class="py-5 bg-dark">
   <div class="container">
-    <p>&copy; Alexandru Olaru</p>
+    <p class="m-0 text-center text-white">Copyright &copy; ALXOLR 2017 - ${state.year}</p>
   </div>
 </footer>
