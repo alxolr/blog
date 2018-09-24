@@ -1,6 +1,7 @@
 'use strict';
 
 require('marko/node-require');
+const config = require('config');
 const path = require('path');
 const fastify = require('fastify')({
   logger: true
@@ -31,6 +32,11 @@ fastify.register(require('fastify-static'), {
   prefix: '/static'
 });
 
+fastify.register(require('fastify-mongoose'), {
+  uri: config.mongoUri
+});
+
+fastify.register(require('./models'));
 fastify.register(require('./routes'));
 
 module.exports = fastify;

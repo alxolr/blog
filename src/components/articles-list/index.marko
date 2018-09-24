@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="articles-container">
+    <for(article in data.articles)>
+      <article-card article=article/>
+    </for>
+  </div>
+</div>
+style {
+  .articles-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

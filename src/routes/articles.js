@@ -1,11 +1,15 @@
 'use strict';
 
-async function routes(fastify, options) {
+async function routes(fastify) {
   fastify.get('/articles', async (request, reply) => {
+
+    const { Article } = fastify.mongo.db.models;
+
+    const articles = await Article.getArticles();
+
     return reply.view('index.marko', {
-      name: 'Frank',
-      count: 30,
-      colors: ['red', 'green', 'blue']
+      title: 'Welcome',
+      articles,
     });
   });
 }
