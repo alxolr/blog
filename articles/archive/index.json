@@ -1,0 +1,165 @@
+[
+  {
+    "title": "Callbacks explained in plain english",
+    "slug": "callbacks-explained-in-plain-english",
+    "filePath": "archive/callbacks-explained-in-plain-english.md",
+    "teaser": "Callbacks - the building blocks of node.js programming. Not that easy to understand and a bit challenging to master",
+    "id": 1,
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/callbacks-explained-in-plain-english.jpg",
+    "createdAt": "2017-08-06T14:38:46.217Z",
+    "tags": [
+      "callbacks",
+      "javascript",
+      "node.js"
+    ]
+  },
+  {
+    "title": "Working with socket.io dynamic namespaces",
+    "slug": "working-with-socket-io-dynamic-namespaces",
+    "filePath": "archive/working-with-socket-io-dynamic-namespaces.md",
+    "teaser": "An interesting experience using dynamic namespaces with socket.io drawbacks and cool features.",
+    "createdAt": "2017-09-06T14:38:46.217Z",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/working-with-socket-io-dynamic-namespaces.jpg",
+    "id": 2,
+    "tags": [
+      "socket.io",
+      "dynamic-namespaces",
+      "node.js"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "How to serve 10x more request using asynchronous request batching",
+    "slug": "how-to-serve-10x-more-request-using-asynchronous-request-batching",
+    "filePath": "archive/how-to-serve-10x-more-request-using-asynchronous-request-batching.md",
+    "teaser": "Asynchronous request batching is one of the simplest yet extremely effective api optimization technique, every node.js developer should add it in his repertoire.",
+    "createdAt": "2017-10-06T14:38:46.217Z",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/how-to-serve-10x-more-request-using-asynchronous-request-batching.png",
+    "tags": [
+      "optimization-technique",
+      "performance-tunning",
+      "asynchronous-request-batching"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Journey towards mastery",
+    "slug": "journey-towards-mastery",
+    "filePath": "archive/journey-towards-mastery.md",
+    "teaser": "Finding myself is my true path, and helping the humanity should be my mastery. But instead what I do ...",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/journey-towards-mastery.jpeg",
+    "createdAt": "2017-11-07T14:38:46.217Z",
+    "tags": [
+      "self-knowledge",
+      "spirituality"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "My learning path for 2018",
+    "slug": "my-learning-path-for-2018",
+    "filePath": "archive/my-learning-path-for-2018.md",
+    "teaser": "My list of books and courses to attend in 2018",
+    "createdAt": "2017-12-06T14:38:46.217Z",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/my-learning-path-for-2018.jpeg",
+    "tags": [
+      "learning",
+      "planning"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Learning asynchronous programming in node.js with callbacks",
+    "slug": "learning-asynchronous-programming-in-node-js-with-callbacks",
+    "filePath": "archive/learning-asynchronous-programming-in-node-js-with-callbacks.md",
+    "teaser": "Asynchronous programming is tricky but once we understand the main concepts we can improve our application performance a lot.",
+    "createdAt": "2018-01-06T14:38:46.217Z",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/learning-asynchronous-programming-in-node-js-with-callbacks.jpg",
+    "tags": [
+      "asynchronous-programming",
+      "callbacks",
+      "node.js"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "How does daily meditation practice help me grow as a professional software developer",
+    "slug": "how-does-daily-meditation-practice-help-me-grow-as-professional-software-developer",
+    "filePath": "archive/how-does-daily-meditation-practice-help-me-grow-as-professional-software-developer.md",
+    "teaser": "In this post I will present my thoughts on the benefits of meditation related to the job of software developer.",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/how-does-daily-meditation-help-me-in-my-professional-career-1287207_1280-min.jpg",
+    "tags": [
+      "self-knowledge",
+      "spirituality",
+      "mindfulness",
+      "meditation"
+    ],
+    "createdAt": "2018-02-06T14:38:46.217Z"
+  },
+  {
+    "id": 8,
+    "title": "Debugging tools and practices in node.js",
+    "slug": "debugging-tools-and-practices-in-node-js",
+    "filePath": "archive/debugging-tools-and-practices-in-node-js.md",
+    "teaser": "In this blog post I want to share what I learn lately concerning debugging best practices, to build better bug nets.",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/debugging-tools-and-practices-in-node-js.jpg",
+    "tags": [
+      "node.js",
+      "debugging",
+      "best-practices"
+    ],
+    "createdAt": "2018-03-06T14:38:46.217Z"
+  },
+  {
+    "id": 9,
+    "title": "Squeeze node.js performance with flame graphs",
+    "slug": "squeeze-node-js-performance-with-flame-graphs",
+    "filePath": "archive/squeeze-node-js-performance-with-flame-graphs.md",
+    "teaser": "We will investigate and optimize a node.js api using flame graphs, caching and request-batching techniques",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/squeeze-node-js-performance-with-flame-graphs-min.jpg",
+    "tags": [
+      "optimization-technique",
+      "best-practices"
+    ],
+    "createdAt": "2018-05-03T07:36:58.688Z"
+  },
+  {
+    "id": 10,
+    "title": "The absolute beginner guide to unit testing in node.js",
+    "slug": "the-absolute-beginner-guide-to-unit-testing-in-node-js",
+    "filePath": "archive/the-absolute-beginner-guide-to-unit-testing-in-node-js.md",
+    "teaser": "We will unit test a super simple node.js module",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/test-670091_1280.png",
+    "tags": [
+      "unit testing",
+      "node.js"
+    ],
+    "createdAt": "2018-07-15T19:01:29.850Z"
+  },
+  {
+    "id": 11,
+    "title": "My most effective improvement strategies",
+    "slug": "my-most-effective-improvement-strategies",
+    "filePath": "archive/my-most-effective-improvement-strategies.md",
+    "teaser": "In our world with enormous amount of data, we need some good strategies to force ourselves to learn.",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/my-most-effective-improvement-strategies.jpeg",
+    "tags": [
+      "self-knowledge",
+      "learning"
+    ],
+    "createdAt": "2018-09-06T06:05:14.216Z"
+  },
+  {
+    "id": 12,
+    "title": "How to test locally AWS SQS queues for a node.js application",
+    "slug": "how-to-test-locally-aws-sqs-queues-for-a-node-js-application",
+    "filePath": "archive/how-to-test-locally-aws-sqs-queues-for-a-node-js-application.md",
+    "teaser": "Recently got an interesting task, to rewrite the application to be able to use the message queues locally instead of AWS SQS.",
+    "image": "https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/how-to-test-locally-aws-sqs-for-node-applications.jpeg",
+    "tags": [
+      "node.js",
+      "amazon-services"
+    ],
+    "createdAt": "2018-09-13T12:38:23.618Z"
+  }
+]
