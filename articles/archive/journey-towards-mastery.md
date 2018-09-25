@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/journey-towards-mastery.jpeg" alt="Journey towards mastery"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/journey-towards-mastery.jpeg" alt="Journey towards mastery"/>
 
 Sometimes I want to express myself and find a reason of what I am doing, and much more important why I am doing it ? why I am trying always to force myself into writing an article ?
 

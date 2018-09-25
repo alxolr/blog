@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/working-with-socket-io-dynamic-namespaces.jpg" alt="Working with socket.io dynamic namespaces"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/working-with-socket-io-dynamic-namespaces.jpg" alt="Working with socket.io dynamic namespaces"/>
 
 ## Summary
 

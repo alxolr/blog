@@ -8,7 +8,7 @@ const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
 const config = require('../src/config');
-const Article = require('../src/models/articles.model');
+const ArticleSchema = require('../src/models/articles.schema');
 
 const id = process.argv[2];
 
@@ -18,6 +18,7 @@ mongoose.connect(config.database.url, {
   useMongoClient: true,
 }, handleArticleUpdate);
 
+const Article = mongoose.model('Article', ArticleSchema);
 
 function handleArticleUpdate(err) {
   assert.equal(err, null);

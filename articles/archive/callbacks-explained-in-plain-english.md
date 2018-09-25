@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/callbacks-explained-in-plain-english.jpg" alt="Callbacks explained in plain english"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/callbacks-explained-in-plain-english.jpg" alt="Callbacks explained in plain english"/>
 
 > _Callbacks_ - the building blocks of node.js programming. Not so easy to understand and a bit challenging to master.
 

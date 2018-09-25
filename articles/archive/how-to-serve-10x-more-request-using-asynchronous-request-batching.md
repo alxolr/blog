@@ -10,7 +10,7 @@
 
 Is an optimization technique consisting from 6 steps as shown on the diagram bellow.
 
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/how-to-serve-10x-more-request-using-asynchronous-request-batching.png" alt="Node.js performance tunning using asynchronous request batching technique"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/how-to-serve-10x-more-request-using-asynchronous-request-batching.png" alt="Node.js performance tunning using asynchronous request batching technique"/>
 
 1. We have a client which requests an api
 2. The request is forwarded by node.js to the database or other data storage service.

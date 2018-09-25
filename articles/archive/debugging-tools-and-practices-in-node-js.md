@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/debugging-tools-and-practices-in-node-js.jpg" alt="Debugging tools and practices in node.js"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/debugging-tools-and-practices-in-node-js.jpg" alt="Debugging tools and practices in node.js"/>
 
 # Summary
 

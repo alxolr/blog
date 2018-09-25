@@ -1,0 +1,142 @@
+<article class="blog-post">
+  <div class="container">
+    <h2 class="blog-post-title">${input.article.title}</h2>
+    <p class="blog-post-meta">
+      ${input.article.createdAt} - <i>${input.article.readTime} min read</i>
+    </p>
+    <ul class="tags">
+      <!-- {{#each article.tags}}
+    <li class="tag">
+      <a href="/articles/tags/{{this}}"
+        class="clearfix">{{this}}</a>
+    </li>
+    {{/each}} -->
+    </ul>
+    $!{input.article.content}
+  </div>
+</article>
+style {
+  .blog-post {
+    margin-bottom: 60px;
+    min-height: 250px;
+  }
+
+  .blog-post-title {
+    margin-bottom: 5px;
+    font-size: 40px;
+  }
+
+  .blog-post-meta {
+    margin-bottom: 20px;
+    color: #999;
+  }
+
+  .blog-footer {
+    padding: 40px 0;
+    color: #999;
+    text-align: center;
+    background-color: #333;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .blog-footer p:last-child {
+    margin-bottom: 0;
+  }
+
+  pre {
+    font-size: 14px;
+  }
+
+  .twitter {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+  }
+
+
+blockquote:before {
+  color: #ccc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tags li {
+  float: left;
+}
+
+.tag {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: white;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid white;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+  .tag:hover {
+    background-color: #43853d;
+    color: white;
+    cursor: pointer;
+  }
+
+  .tag:hover::after {
+    border-left-color: #43853d;
+  }
+
+  .tag:hover > a {
+    color: white;
+  }
+
+  .tag > a:hover {
+    color: white
+  }
+  .tag > a {
+    color: #999;
+  }
+}

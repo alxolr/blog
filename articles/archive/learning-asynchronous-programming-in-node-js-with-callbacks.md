@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/learning-asynchronous-programming-in-node-js-with-callbacks.jpg" alt="Learning asynchronous programming in node.js with callbacks"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/learning-asynchronous-programming-in-node-js-with-callbacks.jpg" alt="Learning asynchronous programming in node.js with callbacks"/>
 
 ## Summary
 

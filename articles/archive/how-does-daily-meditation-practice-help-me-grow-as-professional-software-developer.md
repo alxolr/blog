@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/how-does-daily-meditation-help-me-in-my-professional-career-1287207_1280-min.jpg" alt="How does daily meditation practice help me grow as a professional software developer"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/how-does-daily-meditation-help-me-in-my-professional-career-1287207_1280-min.jpg" alt="How does daily meditation practice help me grow as a professional software developer"/>
 
 # Summary
 

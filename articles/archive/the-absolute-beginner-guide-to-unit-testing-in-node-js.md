@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/test-670091_1280.png" alt="The absolute beginner guide to unit testing in node.js"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/test-670091_1280.png" alt="The absolute beginner guide to unit testing in node.js"/>
 
 ## Intro
 

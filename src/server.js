@@ -37,6 +37,7 @@ fastify.register(require('fastify-mongoose'), {
 });
 
 fastify.register(require('./models'));
-fastify.register(require('./routes'));
+fastify.register(require('./routes/index'));
+fastify.register(require('./routes/articles'));
 
 module.exports = fastify;

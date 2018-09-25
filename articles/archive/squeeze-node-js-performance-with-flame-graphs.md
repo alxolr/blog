@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/squeeze-node-js-performance-with-flame-graphs-min.jpg" alt="Squeeze node.js performance with flame graphs"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/squeeze-node-js-performance-with-flame-graphs-min.jpg" alt="Squeeze node.js performance with flame graphs"/>
 
 # Summary
 

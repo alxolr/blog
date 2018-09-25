@@ -1,4 +1,4 @@
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/my-learning-path-for-2018.jpeg" alt="My learning path for 2018"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/my-learning-path-for-2018.jpeg" alt="My learning path for 2018"/>
 
 # Summary
 
