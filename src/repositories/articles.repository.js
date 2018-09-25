@@ -54,8 +54,14 @@ module.exports = (ArticleSchema) => {
     return this.findOne({ slug });
   }
 
-  function getArticles(queryParams) {
-    return this.find(queryParams).sort({ createdAt: -1 }).lean();
+  function getArticles(opts) {
+    return Promise.all([
+      this.count(),
+      this.find({})
+        .sort({ createdAt: -1 })
+        .limit(opts.limit)
+        .skip(opts.skip)
+    ]);
   }
 
   function searchArticles(searchTerm) {

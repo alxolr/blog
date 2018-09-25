@@ -1,0 +1,36 @@
+<nav aria-label="Pagination">
+  <ul class="pagination">
+    <if(input.paginate.current == 1)>
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Previous</a>
+      </li>
+    </if>
+    <else>
+      <li class="page-item">
+        <a class="page-link" href="/?page=${input.paginate.current - 1}" tabindex="-1">Previous</a>
+      </li>
+    </else>
+    <for(page from 1 to input.paginate.total)>
+      <if(input.paginate.current == page)>
+        <li class="page-item active">
+          <a class="page-link" href="/?page=${page}">${page}</a>
+        </li>
+      </if>
+      <else>
+        <li class="page-item">
+          <a class="page-link" href="/?page=${page}">${page}</a>
+        </li>
+      </else>
+    </for>
+    <if(input.paginate.current == input.paginate.total)>
+      <li class="page-item disabled">
+        <a class="page-link " href="#">Next</a>
+      </li>
+    </if>
+    <else>
+      <li class="page-item">
+        <a class="page-link" href="/?page=${+input.paginate.current + 1}">Next</a>
+      </li>
+    </else>
+  </ul>
+</nav>

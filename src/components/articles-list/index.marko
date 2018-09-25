@@ -1,9 +1,10 @@
 <div class="container">
   <div class="articles-container">
-    <for(article in data.articles)>
+    <for(article in input.articles)>
       <article-card article=article/>
     </for>
   </div>
+  <paginate paginate=input.paginate/>
 </div>
 style {
   .articles-container {
