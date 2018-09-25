@@ -39,5 +39,10 @@ fastify.register(require('fastify-mongoose'), {
 fastify.register(require('./models'));
 fastify.register(require('./routes/index'));
 fastify.register(require('./routes/articles'));
+fastify.setNotFoundHandler(function (request, reply) {
+  reply.view('404.marko', {
+    title: 'Resouce not found'
+  });
+});
 
 module.exports = fastify;
