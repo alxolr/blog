@@ -1,20 +1,15 @@
-<article class="blog-post">
-  <div class="container">
+<div class="container">
+  <article class="blog-post">
     <h2 class="blog-post-title">${input.article.title}</h2>
     <p class="blog-post-meta">
       ${input.article.createdAt} - <i>${input.article.readTime} min read</i>
     </p>
-    <ul class="tags">
-      <!-- {{#each article.tags}}
-    <li class="tag">
-      <a href="/articles/tags/{{this}}"
-        class="clearfix">{{this}}</a>
-    </li>
-    {{/each}} -->
-    </ul>
-    $!{input.article.content}
-  </div>
-</article>
+    <tags-anchors tags=input.article.tags/>
+    <div class="content">$!{input.article.content}</div>
+    <div id="disqus_thread"/>
+  </article>
+</div>
+<fullscreen-img-zoom/>
 style {
   .blog-post {
     margin-bottom: 60px;
@@ -70,73 +65,20 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
-
-.tags {
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
 }
-
-.tags li {
-  float: left;
-}
-
-.tag {
-  background: #eee;
-  border-radius: 3px 0 0 3px;
-  color: white;
-  display: inline-block;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 20px 0 23px;
-  position: relative;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
-}
-
-.tag::before {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-  content: '';
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  width: 6px;
-  top: 10px;
-}
-
-.tag::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid white;
-  border-top: 13px solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-  .tag:hover {
-    background-color: #43853d;
-    color: white;
-    cursor: pointer;
-  }
-
-  .tag:hover::after {
-    border-left-color: #43853d;
-  }
-
-  .tag:hover > a {
-    color: white;
-  }
-
-  .tag > a:hover {
-    color: white
-  }
-  .tag > a {
-    color: #999;
-  }
-}
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = `article-${input.article.slug}-${input.article._id}`;
+  };
+  (function () {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-www-alxolr-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>
+  Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>

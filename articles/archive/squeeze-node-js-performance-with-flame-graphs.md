@@ -21,7 +21,7 @@ The first tool will be [flame graphs](http://www.brendangregg.com/flamegraphs.ht
 
 > _Flame graphs_ are a CPU profiling visualization technique that helps to spot at glance the most frequently used function, and most importantly the time they need to run.
 
-<img class="img img-responsive img-full" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/flame-graphs-example.png" alt="Flame graph example"/>
+<img class="img-fluid img-full" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/flame-graphs-example.png" alt="Flame graph example"/>
 
 On y-axis will be the stack trace height, on the x-axis the CPU time for the function to finish.
 
@@ -157,7 +157,7 @@ After we need to press CTRL + C to build the flame graph, you will get something
 file:///home/alxolr/Work/simple-server/4471.0x/flamegraph.html
 ```
 
-<img class="img img-responsive img-full" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/3068adcc-c249-4e2c-b90d-531e08045fbb.png" alt="First flamegraph profile session"/>
+<img class="img-fluid img-full" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/3068adcc-c249-4e2c-b90d-531e08045fbb.png" alt="First flamegraph profile session"/>
 
 As we can see on top of our callstack we have wide functions in red called `deserializeObject` the problem with this functions is that they are already optimized. They are used by MongoDB driver to deserialize the BSON into JSON objects. We need to factor our code in a way that we reduce the numbers of calls to `deserializeObject`.
 
@@ -234,7 +234,7 @@ Transfer rate:          358.89 [Kbytes/sec] received
 
 Is it the top? Can we get even more performance? Let's profile one more time and see if there are any hot paths that we can optimize.
 
-<img class="img img-responsive img-full" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/after-optimization-flame-graph.png" alt="After optimization flame graph"/>
+<img class="img-fluid img-full" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/after-optimization-flame-graph.png" alt="After optimization flame graph"/>
 
 From the image we, can see that on the red parts it rest only core node.js modules. That usually signifies that to optimize even more we need to rewrite some core features or to factor our code that the functions in red are used less. This is not always possible.
 

@@ -33,7 +33,7 @@ For the current task we will use the native `fs` module.
 
 > A very common solution will be to execute the code in __asynchronous sequence__ as following.
 
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/sequencial-control-flow.png" alt="Asynchronous Sequence control flow!"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/sequencial-control-flow.png" alt="Asynchronous Sequence control flow!"/>
 
 As you can see in the image we are waiting for the response of first operation `read file1.data` to finish then we read the second file `read file2.data` and after the second operation is done we are writing the result in the third file `file3.data`.
 
@@ -65,7 +65,7 @@ This is a common solution but not the best one.
 
 ## Run in parallel
 
-<img class="img img-responsive" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/parallel-control-flow.png" alt="Asynchronous parallel control flow"/>
+<img class="img-fluid" src="https://s3.eu-central-1.amazonaws.com/alxolr-images-bk328/parallel-control-flow.png" alt="Asynchronous parallel control flow"/>
 
 In order to run two tasks in parallel and wait for their callback to finish I need to introduce the concept of __gate keeper__;
 
