@@ -3,18 +3,19 @@
 const server = require('./src/server');
 const config = require('config');
 
-const start = async () => {
-  try {
-    await server.listen(config.port);
-  } catch (err) {
+server.listen(config.port, (err) => {
+  if (err) {
     server.log.error(err);
     process.exit(1);
   }
-};
+  server.log.info(`server listening on ${server.server.address().port}`);
+});
 
 process.on('unhandledRejection', (err) => {
   server.log.error(err);
   process.exit(1);
 });
 
-start();
+process.on('uncaughtException', (err) => {
+  server.log.error(err);
+});

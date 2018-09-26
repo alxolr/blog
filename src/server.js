@@ -1,10 +1,13 @@
 'use strict';
 
 require('marko/node-require');
+
 const config = require('config');
 const path = require('path');
 const fastify = require('fastify')({
-  logger: true
+  logger: {
+    level: 'error'
+  }
 });
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -37,13 +40,15 @@ fastify.register(require('fastify-mongoose'), {
 });
 
 fastify.register(require('./models'));
-fastify.register(require('./routes/index'));
+fastify.register(require('./routes/index'), { debugLevel: 'error' });
 fastify.register(require('./routes/articles'));
 
 fastify.setNotFoundHandler(function (request, reply) {
   reply.view('404.marko', {
-    title: 'Resouce not found'
+    title: 'Resource not found'
   });
 });
+
+fastify.register(require('fastify-compress'));
 
 module.exports = fastify;

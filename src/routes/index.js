@@ -2,23 +2,29 @@
 
 const buildPagination = require('../middlewares/paginate');
 
-async function routes(fastify) {
-  fastify.get('/', async (request, reply) => {
+function routes(fastify, opts, next) {
+  fastify.get('/', (request, reply) => {
     const { Article } = fastify.mongo.db.models;
     const pagination = buildPagination(request.query);
-    const [total, articles] = await Article.getArticles(pagination);
 
-    const paginate = {
-      ...pagination,
-      total: parseInt(total / pagination.limit)
-    };
+    Article.getArticles(pagination)
+      .then(handleArticles);
 
-    return reply.view('index.marko', {
-      title: 'Welcome',
-      articles,
-      paginate,
-    });
+    function handleArticles([total, articles]) {
+      const paginate = {
+        ...pagination,
+        total: parseInt(total / pagination.limit)
+      };
+
+      reply.view('index.marko', {
+        title: 'Welcome',
+        articles,
+        paginate,
+      });
+    }
   });
+
+  next();
 }
 
 module.exports = routes;
