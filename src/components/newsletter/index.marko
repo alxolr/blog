@@ -1,9 +1,32 @@
 <section id="newsletter">
   <div class="container">
-    <h1>Subscribe to our newsletter</h1>
-    <form>
-      <input type="email" placeholder="Enter Email..."/>
-      <button type="submit" class="button">Subscribe</button>
-    </form>
+    <div class="newsletter-wrap">
+      <form class="form-inline newsletter-form-wrap">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="button-newsletter"/>
+          <div class="input-group-append">
+            <button class="btn btn-danger" type="button" id="button-newsletter">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
+style {
+  #newsletter {
+    background-color: rgba(33, 37, 41, 0.75);
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .newsletter-wrap {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .newsletter-form-wrap {
+    margin-top: 15px
+  }
+}
