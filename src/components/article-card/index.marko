@@ -1,4 +1,9 @@
-<div class="article-card">
+class {
+  onButtonClick(path) {
+    window.location = '/articles/' + path;
+  }
+}
+<div class="article-card" on-click('onButtonClick', input.article.slug)>
   <img class="article-card-img" src="${input.article.image}" alt="${input.article.title}" style="width: 100%"/>
   <div class="article-container">
     <a href="/articles/${input.article.slug}">
@@ -7,9 +12,7 @@
     <p class="blog-post-meta">
       <!-- {{formatRelative this.createdAt}} - <i>{{this.readTime}} min read</i> -->
     </p>
-    <p>
-      <small>${input.article.teaser}</small>
-    </p>
+    <p>${input.article.teaser}</p>
   </div>
 </div>
 style {
