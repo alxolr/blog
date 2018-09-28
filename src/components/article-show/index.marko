@@ -1,8 +1,12 @@
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+$ TimeAgo.locale(en);
+$ const timeAgo = new TimeAgo('en-US');
 <div class="container">
   <article class="blog-post">
     <h2 class="blog-post-title">${input.article.title}</h2>
     <p class="blog-post-meta">
-      ${input.article.createdAt} - <i>${input.article.readTime} min read</i>
+      Added ${timeAgo.format(input.article.createdAt)} - <i>${input.article.readTime} min read</i>
     </p>
     <tags-anchors tags=input.article.tags/>
     <div class="content">$!{input.article.content}</div>
@@ -69,7 +73,7 @@ blockquote p {
 <script>
   var disqus_config = function () {
     this.page.url = window.location.href;
-    this.page.identifier = `article-${input.article.slug}-${input.article._id}`;
+    this.page.identifier = 'article-' + '${input.article.slug}' + '-' + '${input.article._id}';
   };
   (function () {
     var d = document, s = d.createElement('script');

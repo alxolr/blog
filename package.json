@@ -19,6 +19,7 @@
     "fastify-plugin": "^1.2.1",
     "fastify-static": "^0.14.0",
     "handlebars": "^4.0.12",
+    "javascript-time-ago": "^1.0.31",
     "lasso": "^3.2.6",
     "lasso-marko": "^2.4.4",
     "make-promises-safe": "^1.1.0",
