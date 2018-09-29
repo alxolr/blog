@@ -1,12 +1,15 @@
 'use strict';
 
 const config = require('config');
+const url = require('url');
 
-function buildPagination(params) {
-  const page = params.page || 1;
+function buildPagination(request) {
+  const page = request.query.page || 1;
   const paginate = {
     current: page,
     limit: config.limit,
+    basePath: url.parse(request.raw.originalUrl).pathname,
+    searchParams: request.query,
     skip: (page - 1) * config.limit
   };
 

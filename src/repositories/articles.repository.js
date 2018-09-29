@@ -61,10 +61,11 @@ module.exports = (ArticleSchema) => {
         .sort({ createdAt: -1 })
         .limit(opts.limit)
         .skip(opts.skip)
+        .lean()
     ]);
   }
 
-  function searchArticles(searchTerm) {
+  function searchArticles(searchTerm, opts) {
     const query = {
       $text: {
         $search: searchTerm,
@@ -72,10 +73,14 @@ module.exports = (ArticleSchema) => {
     };
     const score = { score: { $meta: 'textScore' } };
 
-    return this.find(query, score)
-      .select('-content')
-      .sort({ createdAt: -1, score: { $meta: 'textScore' } })
-      .lean();
+    return Promise.all([
+      this.count(query),
+      this.find(query, score)
+        .sort({ createdAt: -1 })
+        .limit(opts.limit)
+        .skip(opts.skip)
+        .lean()
+    ]);
   }
 
   async function getRelatedArticles(tags, ignore) {

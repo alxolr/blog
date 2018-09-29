@@ -1,21 +1,37 @@
+class {
+  search(event, el) {
+    event.preventDefault();
+    var input = el.querySelector('input');
+    var params = (new URL(document.location)).searchParams;
+    params.set('page', 1);
+    params.set('q', input.value);
+    window.location = '/search?' + params.toString(); 
+  }
+}
 <section id="showcase">
   <div class="container">
     <div class="showcase-wrapper">
       <div class="left-item">
         <div class="logo-wrapper">
-          <a href="/"><img id="showcase-logo" src="https://www.alxolr.com/img/logo.png"/></a>
+          <a href="/">
+            <img id="showcase-logo" src="/static/img/logo.png"/>
+          </a>
         </div>
         <div class="content-wrapper">
           <h1>alxolr's blog</h1>
-          <p> the road to node.js mastery</p>
+          <p>the road to node.js mastery</p>
         </div>
       </div>
       <div class="right-item">
         <div class="search-wrapper">
-          <input type="text"/>
-          <button type="submit">
-            Search
-          </button>
+          <form on-submit('search')>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search an article..." aria-label="Search an article" aria-describedby="button-search"/>
+              <div class="input-group-append">
+                <button class="btn btn-success" type="submit" id="button-search">Search</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
