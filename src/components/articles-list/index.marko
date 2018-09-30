@@ -1,10 +1,16 @@
 <div class="container">
-  <paginate paginate=input.paginate/>
-  <div class="articles-container">
-    <for(article in input.articles)>
-      <article-card article=article/>
-    </for>
-  </div>
+  <if(input.paginate.items > 0)>
+    <paginate paginate=input.paginate/>
+    <div class="articles-container">
+      <for(article in input.articles)>
+        <article-card article=article/>
+      </for>
+    </div>
+  </if>
+  <else>
+    <p>There are no articles for the provided search term.</p>
+    <a href="/">Return home</a>
+  </else>
 </div>
 style {
   .articles-container {

@@ -1,3 +1,7 @@
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+$ TimeAgo.locale(en);
+$ var timeAgo = new TimeAgo('en-US');
 class {
   onButtonClick(path) {
     window.location = '/articles/' + path;
@@ -9,9 +13,8 @@ class {
     <a href="/articles/${input.article.slug}">
       <h3>${input.article.title}</h3>
     </a>
-    <p class="blog-post-meta">
-      <!-- {{formatRelative this.createdAt}} - <i>{{this.readTime}} min read</i> -->
-    </p>
+    <tags-anchors tags=input.article.tags/>
+    <article-meta article=input.article/>
     <p>${input.article.teaser}</p>
   </div>
 </div>

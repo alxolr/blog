@@ -1,13 +1,7 @@
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
-$ TimeAgo.locale(en);
-$ const timeAgo = new TimeAgo('en-US');
 <div class="container">
   <article class="blog-post">
     <h2 class="blog-post-title">${input.article.title}</h2>
-    <p class="blog-post-meta">
-      Added ${timeAgo.format(input.article.createdAt)} - <i>${input.article.readTime} min read</i>
-    </p>
+    <article-meta article=input.article/>
     <tags-anchors tags=input.article.tags/>
     <div class="content">$!{input.article.content}</div>
     <div id="disqus_thread"/>
