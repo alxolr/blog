@@ -1,10 +1,24 @@
-<div class="container">
-  <article class="blog-post">
-    <h2 class="blog-post-title">${input.article.title}</h2>
+class {
+  onMount() {
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = 'article-' + '${input.article.slug}' + '-' + '${input.article._id}';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-www-alxolr-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+<div.container>
+  <article.blog-post>
+    <h1.blog-post-title>${input.article.title}</h1>
     <article-meta article=input.article/>
     <tags-anchors tags=input.article.tags/>
-    <div class="content">$!{input.article.content}</div>
-    <div id="disqus_thread"/>
+    <div.content>$!{input.article.content}</div>
+    <div#disqus_thread/>
   </article>
 </div>
 <fullscreen-img-zoom/>
@@ -53,29 +67,17 @@ style {
   }
 
 
-blockquote:before {
-  color: #ccc;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+  blockquote:before {
+    color: #ccc;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }
 }
-blockquote p {
-  display: inline;
-}
-}
-<script>
-  var disqus_config = function () {
-    this.page.url = window.location.href;
-    this.page.identifier = 'article-' + '${input.article.slug}' + '-' + '${input.article._id}';
-  };
-  (function () {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://https-www-alxolr-com.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
 <noscript>
   Please enable JavaScript to view the
   <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>

@@ -5,40 +5,40 @@ $ function setPageUrl(page) {
 
     return input.paginate.basePath + '?' + params.toString();
   }
-<div class="pagination-wrap">
-  <p class="pagination-total">Articles ${input.paginate.items + (input.paginate.current - 1) * input.paginate.limit} / ${input.paginate.total}</p>
+<div.pagination-wrap>
+  <p.pagination-total>Articles ${input.paginate.items + (input.paginate.current - 1) * input.paginate.limit} / ${input.paginate.total}</p>
   <nav aria-label="Pagination">
-    <ul class="pagination">
+    <ul.pagination>
       <if(input.paginate.current == 1)>
-        <li class="page-item disabled">
-          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        <li.page-item.disabled>
+          <a.page-link href="#" tabindex="-1">Previous</a>
         </li>
       </if>
       <else>
-        <li class="page-item">
-          <a class="page-link" href=setPageUrl((+input.paginate.current) - 1) tabindex="-1">Previous</a>
+        <li.page-item>
+          <a.page-link href=setPageUrl((+input.paginate.current) - 1) tabindex="-1">Previous</a>
         </li>
       </else>
       <for(page from 1 to input.paginate.pages)>
         <if(input.paginate.current == page)>
-          <li class="page-item active">
-            <a class="page-link" href=setPageUrl(page)>${page}</a>
+          <li.page-item.active>
+            <a.page-link href=setPageUrl(page)>${page}</a>
           </li>
         </if>
         <else>
-          <li class="page-item">
-            <a class="page-link" href=setPageUrl(page)>${page}</a>
+          <li.page-item>
+            <a.page-link href=setPageUrl(page)>${page}</a>
           </li>
         </else>
       </for>
       <if(input.paginate.current == input.paginate.pages)>
-        <li class="page-item disabled">
-          <a class="page-link " href="#">Next</a>
+        <li.page-item.disabled>
+          <a.page-link href="#">Next</a>
         </li>
       </if>
       <else>
-        <li class="page-item">
-          <a class="page-link" href=setPageUrl((+input.paginate.current) + 1)>Next</a>
+        <li.page-item>
+          <a.page-link href=setPageUrl((+input.paginate.current) + 1)>Next</a>
         </li>
       </else>
     </ul>

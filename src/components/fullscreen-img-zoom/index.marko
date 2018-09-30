@@ -1,7 +1,40 @@
-<div id="fullscreenModal" class="fullscreen-modal">
-  <span class="fullscreen-close">&times;</span>
-  <img class="fullscreen-modal-content" id="img01"/>
-  <div id="fullscreenCaption"/>
+class {
+  onMount() {
+    // Get the modal
+    var modal = document.getElementById('fullscreenModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var images = document.querySelectorAll('.img-full');
+    if (images.length) {
+      images.forEach(attachClick);
+    }
+    function attachClick(image) {
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("fullscreenCaption");
+      image.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        captionText.style = "text-center";
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("fullscreen-close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+      modal.onclick = function () {
+        modal.style.display = "none";
+      }
+    }
+  }
+}
+<div#fullscreenModal.fullscreen-modal>
+  <span.fullscreen-close>&times;</span>
+  <img#img01.fullscreen-modal-content/>
+  <div#fullscreenCaption/>
 </div>
 style {
   .image-fullscreen-modal:hover {opacity: 0.7;}
@@ -86,34 +119,3 @@ style {
     }
   }
 }
-<script defer>
-  // Get the modal
-  const modal = document.getElementById('fullscreenModal');
-
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  const images = document.querySelectorAll('.img-full');
-  if (images.length) {
-    images.forEach(attachClick);
-  }
-  function attachClick(image) {
-    const modalImg = document.getElementById("img01");
-    const captionText = document.getElementById("fullscreenCaption");
-    image.onclick = function () {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-      captionText.style = "text-center";
-    }
-
-    // Get the <span> element that closes the modal
-    const span = document.getElementsByClassName("fullscreen-close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-    modal.onclick = function () {
-      modal.style.display = "none";
-    }
-  }
-</script>
