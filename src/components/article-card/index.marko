@@ -1,15 +1,11 @@
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
-$ TimeAgo.locale(en);
-$ var timeAgo = new TimeAgo('en-US');
 class {
   onButtonClick(path) {
     window.location = '/articles/' + path;
   }
 }
-<div class="article-card" on-click('onButtonClick', input.article.slug)>
-  <img class="article-card-img" src="${input.article.image}" alt="${input.article.title}" style="width: 100%"/>
-  <div class="article-container">
+<div.article-card on-click('onButtonClick', input.article.slug)>
+  <img.article-card-img src="${input.article.image}" alt="${input.article.title}" style="width: 100%"/>
+  <div.article-container>
     <a href="/articles/${input.article.slug}">
       <h3>${input.article.title}</h3>
     </a>

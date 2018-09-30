@@ -5,9 +5,32 @@ class {
     }
   }
 }
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; Alexandru Olaru</p>
-    <p class="m-0 text-center text-white">2017 - ${state.year}</p>
+<section.before-footer>
+  <div.container>
+    <div.before-footer-wrap>
+      <a.github-button href="https://github.com/alxolr" data-show-count="true" aria-label="Follow @alxolr on GitHub">Follow @alxolr</a>
+      <a.twitter-follow-button href="https://twitter.com/alxolr">Follow @alxolr</a>
+    </div>
+  </div>
+</section>
+<footer.py-5.bg-dark>
+  <div.container>
+    <p.m-0.text-center.text-white>Copyright &copy; Alexandru Olaru</p>
+    <p.m-0.text-center.text-white>2017 - ${state.year}</p>
   </div>
 </footer>
+style {
+  .before-footer {
+    background-color: rgba(33, 37, 41, 0.75);
+    color: white;
+    padding: 10px;
+  }
+
+  .before-footer-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"/>
+<script async defer src="https://buttons.github.io/buttons.js"/>
