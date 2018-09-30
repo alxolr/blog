@@ -1,5 +1,7 @@
 'use strict';
 
+const { buildArticleOGTags } = require('../utils');
+
 function routes(fastify, opts, next) {
   fastify.get('/articles/:slug', (request, reply) => {
     const { Article } = fastify.mongo.db.models;
@@ -11,6 +13,7 @@ function routes(fastify, opts, next) {
       reply.view('article.marko', {
         title: article.title,
         article,
+        og: buildArticleOGTags(article)
       });
     }
   });

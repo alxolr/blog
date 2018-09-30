@@ -1,6 +1,6 @@
 'use strict';
 
-const buildPagination = require('../middlewares/paginate');
+const { buildPagination } = require('../utils');
 
 function routes(fastify, opts, next) {
   const { Article } = fastify.mongo.db.models;

@@ -16,4 +16,17 @@ function buildPagination(request) {
   return paginate;
 }
 
-module.exports = buildPagination;
+function buildArticleOGTags(article) {
+  return {
+    title: article.title,
+    url: `https://www.alxolr.com/articles/${article.slug}`,
+    image: article.image,
+    type: 'article',
+    description: article.teaser
+  };
+}
+
+module.exports = {
+  buildPagination,
+  buildArticleOGTags
+};
