@@ -1,11 +1,26 @@
+import * as axios from 'axios'
+class {
+  subscribe(event, el) {
+    event.preventDefault();
+    var self = this;
+    var input = el.querySelector('input');
+    axios.post('/subscribe', { email: input.value })
+      .then(function(data) {
+        self.emit('notify', {type:'danger', text: 'sometext'});
+      })
+      .catch(function(err) {
+        self.emit('notify', {type:'danger', text: 'sometext'});
+      });
+  }
+}
 <section#newsletter>
   <div.container>
     <div.newsletter-wrap>
-      <form.form-inline.newsletter-form-wrap>
+      <form.form-inline.newsletter-form-wrap on-submit('subscribe')>
         <div.input-group.mb-3>
           <input.form-control type="text" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="button-newsletter"/>
           <div.input-group-append>
-            <button#button-newsletter.btn.btn-danger type="button">Subscribe</button>
+            <button#button-newsletter.btn.btn-danger type="submit">Subscribe</button>
           </div>
         </div>
       </form>

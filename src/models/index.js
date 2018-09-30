@@ -1,11 +1,13 @@
 'use strict';
 
 const ArticleSchema = require('./articles.schema');
+const SubscribeSchema = require('./subscriber.schema');
 
-async function load(fastify) {
+function load(fastify, opts, next) {
   fastify.mongo.db.base.model('Article', ArticleSchema);
-
-  return;
+  fastify.mongo.db.base.model('Subscriber', SubscribeSchema);
+  
+  next();
 }
 
 

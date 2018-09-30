@@ -42,6 +42,7 @@ fastify.register(require('fastify-mongoose'), {
 fastify.register(require('./models'));
 fastify.register(require('./routes/index'), { debugLevel: 'error' });
 fastify.register(require('./routes/articles'));
+fastify.register(require('./routes/subscribers'));
 
 fastify.setNotFoundHandler(function (request, reply) {
   reply.view('404.marko', {

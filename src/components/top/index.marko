@@ -1,6 +1,6 @@
 class {
   onMount() {
-    window.onscroll = this.scroll;
+    this.subscribeTo(window).on('scroll', this.scroll);
   }
 
   up() {

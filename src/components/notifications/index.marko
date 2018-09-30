@@ -1,0 +1,20 @@
+class {
+  onMount() {
+    this.subscribeTo(document).on('notify', this.onNotify);
+  }
+
+  onNotify(alert) {
+    console.log('ajunge');
+    var el = document.getElementById('notification-alert');
+    el.style.display = 'block';
+    el.className ='alert';
+    el.classList.add('alert-' + alert.type);
+    el.innerText = alert.text;
+  }
+}
+<div#notification-alert.alert role="alert"/>
+style {
+  #notification-alert {
+    display: none;
+  }
+}
