@@ -6,10 +6,17 @@ class {
     var input = el.querySelector('input');
     axios.post('/subscribe', { email: input.value })
       .then(function(data) {
-        self.emit('notify', {type:'danger', text: 'sometext'});
+        self.emit('alert', {type:'alert-success', text: 'Thank you for subscribing!'});
+        input.value = '';
       })
-      .catch(function(err) {
-        self.emit('notify', {type:'danger', text: 'sometext'});
+      .catch(function(data) {
+        var message;
+        if (data.response.data.error.includes('11000')) {
+          message = 'It seems you are already subscribed';
+        } else {
+          message = 'Something went wrong, please try again later';
+        }
+        self.emit('alert', {type:'alert-danger', text: message });
       });
   }
 }

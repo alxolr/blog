@@ -1,0 +1,25 @@
+class {
+  handleAlert(data) {
+    var alert = document.getElementById('notification-alert');
+    alert.style.display = 'block'; 
+    alert.innerText = data.text;
+    alert.className = 'alert';
+    alert.classList.add(data.type);
+
+    setTimeout(function () {
+      alert.style.display = 'none'; 
+    }, 5000);
+  }
+}
+<div#notification-alert-wrap.notifications-wrap>
+  <div.container>
+    <div#notification-alert.alert/>
+  </div>
+  <newsletter key="newsletter" on-alert('handleAlert')/>
+</div>
+style {
+  #notification-alert {
+    display: none;
+    margin: 10px;
+  }
+}
