@@ -18,7 +18,18 @@ function routes(fastify, opts, next) {
       });
   });
 
-  fastify.get('/unsubscribe/:token', (request, reply) => {
+  fastify.get('/unsubscribe/:apiKey', (request, reply) => {
+    Subscriber.findOne({ apiKey: request.params.apiKey })
+      .then((subscriber) => {
+        if (subscriber) {
+          subscriber.subscribed = false;
+
+          return subscriber.save();
+        }
+
+        return subscriber;
+      })
+      .then(() => reply.view('unsubscribe.marko', {}));
   });
 
   next();
