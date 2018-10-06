@@ -18,9 +18,7 @@ const id = process.argv[2];
 
 mongoose.Promise = Promise;
 
-mongoose.connect(config.mongoUri, {
-  useNewUrlParser: true
-}, handleArticlePublication);
+mongoose.connect(config.mongoUri, { useMongoClient: true }, handleArticlePublication);
 
 const Article = mongoose.model('Article', ArticleSchema);
 
