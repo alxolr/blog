@@ -1,11 +1,33 @@
 'use strict';
 
-const { buildArticleOGTags } = require('../utils');
-
+const { buildArticleOGTags, buildPagination } = require('../utils');
 function routes(fastify, opts, next) {
-  fastify.get('/articles/:slug', (request, reply) => {
-    const { Article } = fastify.mongo.db.models;
+  const { Article } = fastify.mongo.db.models;
 
+  fastify.get('/articles/tags/:tag', (request, reply) => {
+    const pagination = buildPagination(request);
+
+    Article.getArticlesByTag(request.params.tag, pagination)
+      .then(handleArticles);
+
+    function handleArticles([total, articles]) {
+      const paginate = {
+        ...pagination,
+        pages: parseInt(Math.ceil(total / pagination.limit)) || 1,
+        items: articles.length,
+        total
+      };
+
+      reply.view('index.marko', {
+        title: 'Tag' + request.params.tag,
+        articles,
+        paginate,
+      });
+    }
+  });
+
+
+  fastify.get('/articles/:slug', (request, reply) => {
     Article.getArticleBySlug(request.params.slug)
       .then(handleArticleBySlug);
 

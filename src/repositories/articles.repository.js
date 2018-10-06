@@ -33,26 +33,26 @@ module.exports = (ArticleSchema) => {
     }
   }
 
-  function getArticlesByTag(tags, ignore = null) {
+  function getArticleBySlug(slug) {
+    return this.findOne({ slug });
+  }
+
+
+  function getArticlesByTag(tags, opts) {
     const query = {
       tags,
     };
 
-    if (ignore) {
-      query.slug = {
-        $ne: ignore,
-      };
-    }
-
-    return this.find(query)
-      .sort({ createdAt: -1 })
-      .select('-content')
-      .lean();
+    return Promise.all([
+      this.count(query),
+      this.find(query)
+        .sort({ createdAt: -1 })
+        .limit(opts.limit)
+        .skip(opts.skip)
+        .lean()
+    ]);
   }
 
-  function getArticleBySlug(slug) {
-    return this.findOne({ slug });
-  }
 
   function getArticles(opts) {
     return Promise.all([
