@@ -1,20 +1,12 @@
-'use strict';
-
 module.exports = {
   apps: [
     {
-      name: 'blog',
-      script: './index.js',
+      name: 'alxolr-blog',
+      script: 'index.js',
       watch: true,
+      instance_var: '0',
       env: {
-        PORT: 8080,
-        NODE_ENV: 'development',
-        NODE_APP_INSTANCE: 'development'
-      },
-      env_production: {
-        PORT: 8080,
-        NODE_ENV: 'production',
-        NODE_APP_INSTANCE: 'production'
+        NODE_ENV: 'production'
       }
     }
   ]
