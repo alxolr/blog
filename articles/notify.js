@@ -60,11 +60,12 @@ function buildMessage(subscriber, article) {
     I want badly to know what do you think about it.
     If you have any questions you can email me at alxolr@gmail.com, I will gladly respond.
 
-    The unsubscribe feature is in progress but feel free to email me if you do not want to receive any emails.
-
     Best regards,
     Your node.js enthusiast
     Alexandru Olaru
+
+    In order to unsubscribe please follow the next url:
+    https://alxolr.com/unsubscribe?apiKey=${subscriber.apiToken}
   `;
 
   return {
