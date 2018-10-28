@@ -5,8 +5,8 @@
 const mongoose = require('mongoose');
 const archive = require('./archive');
 const assert = require('assert');
-const config = require('../src/config');
-const Subscriber = require('../src/models/subscribers.model');
+const config = require('../config/default');
+const SubscriberSchema = require('../src/models/subscriber.schema');
 const mailer = require('../src/services/sendgrid-mailer');
 
 const id = process.argv[2];
@@ -16,6 +16,8 @@ mongoose.Promise = Promise;
 mongoose.connect(config.database.url, {
   useMongoClient: true,
 }, handleNotifySubscribers);
+
+const Subscriber = mongoose.model('Subscriber', SubscriberSchema);
 
 function handleNotifySubscribers(err) {
   assert.ifError(err);

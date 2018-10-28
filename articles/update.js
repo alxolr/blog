@@ -7,14 +7,14 @@ const archive = require('./archive');
 const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
-const config = require('../src/config');
+const config = require('../config/default');
 const ArticleSchema = require('../src/models/articles.schema');
 
 const id = process.argv[2];
 
 mongoose.Promise = Promise;
 
-mongoose.connect(config.database.url, {
+mongoose.connect(config.mongoUri, {
   useMongoClient: true,
 }, handleArticleUpdate);
 
@@ -60,4 +60,3 @@ process.on('unhandledRejection', (err) => {
   console.error(err);
   mongoose.disconnect();
 });
-
